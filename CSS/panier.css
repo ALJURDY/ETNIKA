@@ -1,0 +1,333 @@
+/******Panier***/
+main {
+    font-weight: 300;
+    /* background-color: var(--color-extra_light_grey); */
+}
+
+/* ------- Progress bar --------- */
+
+
+#progress-bar {
+    justify-content: center;
+    gap: 5px;
+    margin: 50px 0px 100px;
+}
+
+.step {
+    gap: 10px;
+}
+
+.step > p {
+    font-size: 13px;
+}
+.step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-weight: 700;
+    justify-content: center;
+    
+}
+
+.step-1{
+    background-color: var(--color-red);
+}
+.step-2{
+    background-color: var(--color-light_grey);
+}
+.step-3{
+    background-color: var(--color-light_grey);
+}
+
+#progress-bar span{
+    position: relative;
+    display: inline-block;
+    background: black;
+    min-width: 20%;
+    height: .5px;
+    margin-bottom: 30px;
+}
+
+/* --------- Continuer achats ---------- */
+.continuer {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+/* -------------- nombre d'articels ------------ */
+.separator {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 20px;
+}
+
+.separator > span {
+    position: relative;
+    display: inline-block;
+}
+
+.separator > span:before,
+.separator > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: var(--color-dark_grey);
+}
+
+.separator > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.separator > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
+/* ---------- section commande ---------- */
+#detail-commande{
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* ---------- section article et livraison ---------     */
+
+.article-livraison {
+    align-items: flex-start;
+    gap: 50px;
+}
+/* ----------- Articles du panier ----------  */
+.articles{
+    border: 1px solid black;
+    width: 100%;
+    /* background-color: var(--color-extra_light_grey); */
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+
+}
+
+.articles h2{
+    font-size: clamp(16px,3vw,25px);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.article {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+
+}
+.detail {
+    align-items: flex-start;
+    gap: 10px;
+}
+.nom-prix{
+    width: 100%;
+    font-weight: 700;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.nom-prix p{
+    font-size: 18px;
+}
+
+.fa-heart {
+    color: var(--color-red);
+}
+
+.elements {
+    gap: 40px;
+
+}
+
+.element {
+    justify-content: space-around;
+    gap: 10px;
+
+}
+
+.articles hr{
+    width: 100%;
+    border-top: 1px solid grey;
+}
+
+/* --------------- livraison ------------ */
+.livraison {
+    border: 1px solid black;
+    padding: 10px 20px;
+
+
+    /* background-color: var(--color-beige); */
+
+}
+h4 {
+    padding-bottom: 30px;
+}
+
+.livraison p {
+    padding-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.groupe1 {
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.groupe2 {
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+
+.livraison hr {
+    width: 50%;
+}
+
+/* ----------- ASIDE ------------- */
+aside {
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+ /* ---------- PRIX TOTAL ------------ */
+.total {
+    width: 100%;
+    border: 1px solid black;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px 20px 40px;
+
+}
+.total hr {
+    width: 50%;
+}
+
+.total-prix{
+    font-weight: bold;
+    font-size: 25px;
+}
+.total span {
+    gap: 10px;
+    font-size: 16px;
+}
+.total a{
+    margin-top: 20px;
+}
+
+.btn {
+    align-self: center;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 10px 20px;
+    font-size: clamp(5px, 3vw, 15px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--color-beige);
+    color: var(--color-black);
+}
+
+
+/* ---------- CONDITION ----------- */
+.condition {
+    padding: 10px 20px;
+    border: 1px solid black;
+    gap: 20px;
+    font-weight: 300px;
+    align-items: flex-start;
+}
+
+.condition i {
+    color: green;
+}
+
+@media (max-width: 1090px){
+    .element{
+        gap: 2px;
+    }
+    .elements{
+        gap: 5px;
+    }
+}
+@media (max-width:980px) {
+    #detail-commande {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .article-livraison{
+        gap: 15px;
+    }
+    .elements{
+        gap: 10px;
+    }
+    aside{
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 750px){
+    /* ------- progress bar ------- */
+    #progress-bar  {
+        margin: 0px 20px;
+    }
+    .step-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .step > p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 630px){
+    .article{
+        flex-direction: column;
+    }
+    .article a{
+        align-self: center;
+    }
+    .elements{
+        gap: 5px;
+    }
+
+    .livraison label, .livraison li{
+        font-size: 12px;
+    }
+}
+@media (max-width: 550px){
+    /* ------- progress bar ------- */
+    #progress-bar  {
+        margin: 0px 30px;
+    }
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    /* .step > p {
+        font-size: 10px;
+    } */
+}
